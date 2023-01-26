@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style>
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+		* {
+            padding: 0;
+            margin: 0;
+			box-sizing: border-box;
+            font-family: 'Patrick Hand', cursive;
+			color: white;
+			font-size: 20px;
+		}
+
+        body {
+            background: #000 url("/bg_1.png") no-repeat fixed center center;
+	        background-size: cover;
+	        /*backdrop-filter: brightness(80%) blur(5px);*/
+	        min-height: 100vh;
+	        overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        #app {
+            margin: auto;
+            width: 100vw;
+        }
+
+        header {
+	        text-align: center;
+        }
+
+        header h1 {
+	        font-size: 3rem;
+        }
+
+        section#weathers {
+	        display: flex;
+	        justify-content: start;
+	        align-items: center;
+            overflow-x: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        section#weathers::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        section#weathers article {
+            margin: 20px;
+            padding: 20px;
+            background: rgba( 255, 255, 255, 0.35 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 9px );
+            -webkit-backdrop-filter: blur( 9px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+
+        section#weathers article {
+	        display: flex;
+	        flex-direction: column;
+	        align-items: center;
+	        text-align: center;
+        }
+
+        .card__temp div:nth-child(1) {
+			padding-top: 10px;
+        }
+
+        .card__temp div:nth-child(2) p {
+			font-size: 2rem;
+	        margin-top: -30px;
+	        margin-bottom: 20px;
+        }
+
+        .card__minmax {
+            width: 100%;
+	        display: flex;
+	        justify-content: space-between;
+        }
+
+        .card__pressure {
+            margin-top: 10px;
+            width: 100%;
+	        display: flex;
+	        justify-content: space-evenly;
+        }
+	</style>
+	<title>Vite App</title>
+</head>
+<body>
+<div id="app">
+	<header>
+		<h1 id="ville">Comines</h1>
+	</header>
+	<section id="weathers"></section>
+</div>
+<script type="module" src="/main.js"></script>
+</body>
+</html>
